@@ -1,0 +1,24 @@
+docker run -p 27017:27017 --name mongo -d mongo:latest
+
+curl -i -X POST -H "Content-Type:application/json" -d "{  \"firstName\" : \"Frodo\",  \"lastName\" : \"Baggins\" }" http://localhost:8080/people
+
+curl http://localhost:8080/people
+
+docker build -t k8s-demo-spring-mongo:1 .
+
+
+Gives Error for Mongo ==> Show error
+docker run k8s-demo-spring-mongo:1
+
+docker run --link mongo:mongoserver -e SPRING_DATA_MONGODB_HOST=mongoserver k8s-demo-spring-mongo:1
+
+
+kubectl -n demo create deployment mongo --image=mongo:latest -o yaml
+
+kubectl -n demo expose deployment mongo --port=27017 --target-port=27017 -o yaml
+
+
+
+kubectl -n demo create deployment demo-app --image=k8s-demo-spring-mongo:1 -o yaml
+
+kubectl -n demo expose deployment demo-app --port=8080 --target-port=8080 --type=LoadBalancer -o yaml
