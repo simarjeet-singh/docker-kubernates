@@ -3,7 +3,7 @@
 ## Prerequsites  
 
 * Docker (see details below for install)
-* git
+* git (have the command line version installed)
 * vscode (or any other editor)
 * Java-8 (JDK-8)
 
