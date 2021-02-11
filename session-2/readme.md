@@ -85,20 +85,20 @@ kubectl -n demo logs <podname_from previous command>
 ```
 
 
-#### 5) Lets now create service for demo-app
+#### 13) Lets now create service for demo-app
 
 ``` bash
 kubectl -n demo expose deployment demo-app --port=8080 --target-port=8080 --type=LoadBalancer 
 ```
 
-#### 6) Validate the demo-app service and it connected to pods
+#### 14) Validate the demo-app service and it connected to pods
 
 ``` bash
 kubectl -n demo get service
 kubectl -n demo get ep
 ```
 
-#### 4) Lets validate the application is working
+#### 15) Lets validate the application is working
 
 * Access Rest API interface of application via CURL command -  
 
@@ -118,17 +118,17 @@ kubectl -n demo get ep
 curl http://localhost:8080/people
 ```
 
-#### 4) Lets autoscale our application
+#### 16) Lets autoscale our application
 
 ``` bash
 kubectl -n demo autoscale deployment demo-app --min=2 --max=15 --cpu-percent=70
 ```
-#### 4) Validate autoscaler has been created 
+#### 17) Validate autoscaler has been created 
 
 ``` bash
 kubectl -n demo get hpa
 ```
-#### 4) This step will take some time and after that 2 pods should be up and runing 
+#### 18) This step will take some time and after that 2 pods should be up and runing 
 
 ``` bash
 kubectl -n demo get pods
