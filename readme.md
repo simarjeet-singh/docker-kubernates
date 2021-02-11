@@ -2,10 +2,12 @@
 
 ## Prerequsites  
 
-* Docker
+* Docker (see details below for install)
 * git
-* vscode (or anyother editor)
+* vscode (or any other editor)
+* Java-8 (JDK-8)
 
+Note: Please install Java JDK-8 and setup your JAVA_HOME ponting to JDK installation path
 ##### For Docker installation 
 
 * Docker Desktop should be installed on local machine (Laptop/desktop/macbook etc) with latest version
@@ -13,6 +15,7 @@
   * For Windows: https://docs.docker.com/docker-for-windows/install/
 
 * Once Docker is installed - verify installation by running below command in respective command line tool (shell or CMD):  
+
 
   ```bash
   docker info
@@ -56,8 +59,10 @@ Server: Docker Engine - Community
   GitCommit:        de40ad0
 ```
 
-</details>
+</details>  
+
 Any error means Docker is not installed properly or services are not running fine.
+
 
 * Docker Kubernetes extension should be enabled (please follow below link based on your machine)
   * For Mac: https://docs.docker.com/docker-for-mac/#kubernetes
@@ -68,6 +73,7 @@ Any error means Docker is not installed properly or services are not running fin
   ```bash
   kubectl get namespace
   ```
+
   Output should be something like -
 
 <details>
@@ -83,11 +89,12 @@ kube-system       Active   122m
 
 </details>
 
-### Clone this GIT repository on your Local Desktop/Laptop
+#### Clone this GIT repository on your Local Desktop/Laptop
 
-* To Clone
-  
+* Clone the repository in your Local machine at your desired location -
+
   ```bash
   git clone https://github.com/aamol/ice-2021.git
   cd ice-2021
   ```
+
