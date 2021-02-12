@@ -99,3 +99,11 @@ press ctrl+c
   docker stop mongo demo-app
   docker rm mongo demo-app
   ```
+  
+  ### Troubleshooting
+  
+  We may face issue while compiling our code as shown below-
+  Error: JAVA_HOME not found in your environment.
+  
+  To resolve it, we have to set the JAVA_HOME variable in our environment and for that we can follow the steps here- https://mkyong.com/java/how-to-set-java_home-on-windows-10/
+  
