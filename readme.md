@@ -98,3 +98,11 @@ kube-system       Active   122m
   cd ice-2021
   ```
 
+
+### For Session-1  
+
+[Handson session-1 instructions](./session-1/readme.md)
+
+### For Session-3  
+
+[Handson session-3 instructions](./session-2/readme.md)
